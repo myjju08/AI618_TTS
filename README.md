@@ -126,6 +126,10 @@ seed는 생성 조건을 기록하고 같은 환경에서 재현을 시도하기
 
 ## 테스트
 
+2026-11-23 검증: 로컬 자동 테스트 **66개**, Windows/Linux × Python 3.10/3.12의 [GitHub CI](https://github.com/myjju08/AI618_TTS/actions/runs/45190359126)가 통과했습니다. Demo 60개 생성과 재실행 시 기존 파일 재사용, 실행 중인 Gradio HTTP API의 생성·다운로드·재생성을 확인했습니다.
+
+실제 **Qwen 1.7B / Ryan / CPU**로 같은 문장의 Documentary·Station × American·British **4개**도 생성했습니다. [비교 WAV와 생성 기록](examples/qwen-cpu/README.md)을 포함합니다. 파일 생성 및 수치 검증이며, 문장 정확성·톤·악센트의 청취 검수 완료를 뜻하지 않습니다. 브라우저 클릭 자동화는 도구의 URL 검증 차단으로 완료하지 못했습니다.
+
 ```powershell
 pytest -q
 ```
@@ -133,3 +137,5 @@ pytest -q
 단위 테스트는 모델 다운로드 없이 CSV 검증, 조합 생성, 실제 TTS 호출 인자, 실패 처리, SNR과 파일 저장 등을 확인합니다. 실제 모델 검증은 별도로 작은 Qwen 배치를 생성해 듣고 기록하세요.
 
 Qwen 연동은 [공식 Qwen3-TTS 문서](https://github.com/QwenLM/Qwen3-TTS)의 `generate_custom_voice(text=..., language="English", speaker=..., instruct=...)` 인터페이스를 사용합니다.
+
+모델 다운로드가 Xet 전송에서 멈추는 환경에서는 실행 전에 PowerShell의 `$env:HF_HUB_DISABLE_XET="1"` 또는 macOS/Linux의 `export HF_HUB_DISABLE_XET=1`을 설정해 일반 HTTP 다운로드로 재시도할 수 있습니다. 이번 Windows 검증에서는 이 설정으로 다운로드를 완료했습니다.

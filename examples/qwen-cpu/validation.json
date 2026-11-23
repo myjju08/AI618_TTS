@@ -1,0 +1,51 @@
+{
+  "verified_on": "2026-11-23",
+  "device": "cpu",
+  "unit_tests_passed": 66,
+  "demo_batch_samples_passed": 60,
+  "demo_resume_verified": true,
+  "gradio_http_generate_download_regenerate_verified": true,
+  "visual_browser_verification": "Blocked by Computer Use URL verification; not completed.",
+  "ci_url": "https://github.com/myjju08/AI618_TTS/actions/runs/45190359126",
+  "ci_matrix": [
+    "ubuntu/Python3.10",
+    "ubuntu/Python3.12",
+    "windows/Python3.10",
+    "windows/Python3.12"
+  ],
+  "real_qwen_samples": [
+    {
+      "preset": "station",
+      "requested_accent": "american",
+      "speech_seconds": 2.16,
+      "mixed_seconds": 3.16,
+      "measured_snr_db": 9.999999998071132,
+      "mixed_peak": 0.6750288009643555
+    },
+    {
+      "preset": "documentary",
+      "requested_accent": "american",
+      "speech_seconds": 2.4,
+      "mixed_seconds": 2.4,
+      "measured_snr_db": null,
+      "mixed_peak": 0.3971594274044037
+    },
+    {
+      "preset": "documentary",
+      "requested_accent": "british",
+      "speech_seconds": 2.32,
+      "mixed_seconds": 2.32,
+      "measured_snr_db": null,
+      "mixed_peak": 0.6015305519104004
+    },
+    {
+      "preset": "station",
+      "requested_accent": "british",
+      "speech_seconds": 2.88,
+      "mixed_seconds": 3.88,
+      "measured_snr_db": 10.000000000098655,
+      "mixed_peak": 0.5340793132781982
+    }
+  ],
+  "listening_quality_review": "Not evaluated: text accuracy, tone distinction, requested accents and perceived noise require listening."
+}
