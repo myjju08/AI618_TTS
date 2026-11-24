@@ -1,0 +1,6 @@
+# Optional, independent speech QA; not required to run the generator.
+faster-whisper==1.2.1
+librosa>=0.11,<2
+numpy>=1.26,<3
+scipy>=1.12,<2
+soundfile>=0.12,<1

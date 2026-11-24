@@ -1,5 +1,7 @@
 # 실제 Qwen CPU 비교 샘플
 
+후속 검수: 이 4개를 포함한 [16개 샘플의 독립 ASR·음향 검수](../../reports/quality-audit-2026-11-24/README.md)를 2026-11-24에 추가했습니다. 아래는 최초 생성 당시의 기록입니다.
+
 2026-11-23에 Qwen3-TTS-12Hz-1.7B-CustomVoice, Ryan, CPU float32, eager attention으로 생성한 WAV입니다. 입력 문장은 모두 `The next train will arrive in five minutes.`입니다. 읽을 문장과 스타일 지시는 따로 전달했습니다.
 
 | 상황 | 요청 악센트 | 깨끗한 음성 | 최종 합성 |
